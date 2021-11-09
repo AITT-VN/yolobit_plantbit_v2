@@ -748,7 +748,7 @@ Blockly.Python['plantbit2_dual_usb_pump'] = function(block) {
   var dropdown_name = block.getFieldValue('NAME');
   var value_percent = Blockly.Python.valueToCode(block, 'percent', Blockly.Python.ORDER_ATOMIC);
   // TODO: Assemble Python into code variable.
-  var code = ''+dropdown_name+'.write_analog(round(translate('+value_percent+', 0, 100, 0, 4095)))\n';
+  var code = ''+dropdown_name+'.write_analog(round(translate('+value_percent+', 0, 100, 0, 1023)))\n';
   return code;
 };
 
@@ -866,6 +866,6 @@ Blockly.Python['plantbit2_dual_usb_led'] = function(block) {
   var dropdown_name = block.getFieldValue('NAME');
   var value_percent = Blockly.Python.valueToCode(block, 'percent', Blockly.Python.ORDER_ATOMIC);
   // TODO: Assemble Python into code variable.
-  var code = ''+dropdown_name+'.write_analog(round(translate('+value_percent+', 0, 100, 0, 4095)))\n';
+  var code = ''+dropdown_name+'.write_analog(round(translate('+value_percent+', 0, 100, 0, 1023)))\n';
   return code;
 };
