@@ -1,30 +1,25 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
   <category name="PLANT:BIT V2" colour="#07840e" icon="tree">
-    <block type="plantbit_soil_sensor"/>
-    <block type="plantbit_light_sensor"/>
-    <block type="plantbit_dht_create"/>
-    <block type="plantbit_dht_measure"/>
-    <block type="plantbit_dht_read"/>
-    <block type="plantbit_ultrasonic_create"/>
-    <block type="plantbit_ultrasonic_read"/>
-    <block type="plantbit_ultrasonic_checkdistance">
+    <block type="plantbit2_soil_sensor"/>
+    <block type="plantbit2_light_sensor"/>
+    <block type="plantbit2_dht_measure"/>
+    <block type="plantbit2_dht_read"/>
+    <block type="plantbit2_ultrasonic_create"/>
+    <block type="plantbit2_ultrasonic_read"/>
+    <block type="plantbit2_ultrasonic_checkdistance">
       <value name="DISTANCE"><shadow type="math_number"><field name="NUM">0</field></shadow></value>
     </block> 
-    <block type="plantbit_ultrasonic_checkwater">
-      <value name="A"><shadow type="math_number"><field name="NUM">5</field></shadow></value>
-      <value name="B"><shadow type="math_number"><field name="NUM">12</field></shadow></value>
-    </block>
-    <block type="plantbit_oled_create"/>
-    <block type="plantbit_oled_text">
+    <block type="plantbit2_oled_create"/>
+    <block type="plantbit2_oled_text">
       <value name="TEXT"><shadow type="text"><field name="TEXT">hello</field></shadow></value>
       <value name="X"><shadow type="math_number"><field name="NUM">0</field></shadow></value>
       <value name="Y"><shadow type="math_number"><field name="NUM">0</field></shadow></value>
     </block>    
-    <block type="plantbit_oled_fill"/>
-    <block type="plantbit_dual_usb_1">
+    <block type="plantbit2_oled_fill"/>
+    <block type="plantbit2_dual_usb_pump">
       <value name="percent"><shadow type="math_number"><field name="NUM">70</field></shadow></value>
     </block>
-    <block type="plantbit_dual_usb_2">
+    <block type="plantbit2_dual_usb_led">
       <value name="percent"><shadow type="math_number"><field name="NUM">70</field></shadow></value>
     </block> 
   </category>

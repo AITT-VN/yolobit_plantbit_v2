@@ -2,7 +2,7 @@
     "name": "PLANT:BIT V2",
     "description": "Mục mở rộng dành cho bộ kit trồng cây thông minh Plant:Bit",
     "libs": [
-        "hcsr04.py","ssd1306.py"
+        "plantbit2_hcsr04.py","plantbit2_ssd1306.py", "plantbit2_dht20.py"
     ],
     "blocks": [
         "definition.js"
