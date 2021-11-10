@@ -88,53 +88,6 @@ Blockly.Python['plantbit2_light_sensor'] = function(block) {
   return [code, Blockly.Python.ORDER_NONE];
 };
 
-Blockly.Blocks["plantbit2_dht_create"] = {
- 
-  init: function() {
-    this.jsonInit({
-      type: "plantbit_dht_create",
-      message0: Blockly.Msg.BLOCK_DHT_CREATE_MESSAGE0 ,
-      args0: [
-        {
-          type: "field_variable",
-          name: "dht_sensor",
-          variable: Blockly.Msg.BLOCK_DHT_CREATE_MESSAGE1
-        },
-        {
-          type: "field_dropdown",
-          name: "port",
-          options: [
-            ["P0", "pin0"],
-            ["P1", "pin1"],
-            ["P2", "pin2"],
-            ["P3", "pin3"],
-            ["P4", "pin4"],
-            ["P5", "pin5"],
-            ["P6", "pin6"],
-            ["P7", "pin7"],
-            ["P7", "pin2"],
-            ["P10", "pin10"],
-            ["P11", "pin11"],
-            ["P12", "pin12"], 
-            ["P13", "pin13"],
-            ["P14", "pin14"],
-            ["P15", "pin15"],
-            ["P16", "pin16"],
-            ["P19", "pin19"],
-            ["P20", "pin20"]
-          ]
-        }
-      ],
-      inputsInline: false,
-      previousStatement: null,
-      nextStatement: null,
-      colour: "#009900",
-      tooltip: Blockly.Msg.BLOCK_DHT_CREATE_TOOLTIP,
-      helpUrl: Blockly.Msg.BLOCK_DHT_CREATE_HELPURL
-    });
-  }
-};
-
 Blockly.Blocks["plantbit2_dht_measure"] = {
   init: function() {
     this.jsonInit({
@@ -147,6 +100,9 @@ Blockly.Blocks["plantbit2_dht_measure"] = {
       tooltip: Blockly.Msg.BLOCK_DHT_MEANSURE_TOOLTIP,
       helpUrl: Blockly.Msg.BLOCK_DHT_MEANSURE_HELPURL
     });
+  },
+  getDeveloperVars: function() {
+    return ['dht20'];
   }
 };
 
@@ -169,20 +125,10 @@ Blockly.Blocks["plantbit2_dht_read"] = {
       tooltip: Blockly.Msg.BLOCK_DHT_READ_TOOLTIP,
       helpUrl: Blockly.Msg.BLOCK_DHT_READ_HELPURL
     });
+  },
+  getDeveloperVars: function() {
+    return ['dht20'];
   }
-};
-
-
-Blockly.Python["plantbit2_dht_create"] = function(block) {
-  var variable_dht = Blockly.Python.variableDB_.getName(block.getFieldValue('dht_sensor'), Blockly.Variables.NAME_TYPE);
-  var dropdown_port = block.getFieldValue("port");
-  // TODO: Assemble Python into code variable.
-  Blockly.Python.definitions_["import_yolobit"] = "from yolobit import *";
-  Blockly.Python.definitions_["import_time"] = "import time";
-  Blockly.Python.definitions_['import_i2c'] = 'from machine import Pin, SoftI2C';
-  Blockly.Python.definitions_["import_dht20"] = "from plantbit2_dht20 import DHT20";
-  var code =  variable_dht + " = DHT20(SoftI2C(scl=Pin(22), sda=Pin(21)))\n";
-  return code;
 };
 
 Blockly.Python["plantbit2_dht_measure"] = function(block) {
@@ -392,6 +338,9 @@ Blockly.Blocks['plantbit2_ultrasonic_create'] = {
         "helpUrl": Blockly.Msg.ULTRASONIC_CREATE_HELPURL
       }
     );
+  },
+  getDeveloperVars: function() {
+    return ['ultrasonic_plant_bit'];
   }
 };
 
@@ -433,6 +382,9 @@ Blockly.Blocks['plantbit2_ultrasonic_read'] = {
         "helpUrl": Blockly.Msg.ULTRASONIC_READ_HELPURL
       }
     );
+  },
+  getDeveloperVars: function() {
+    return ['ultrasonic_plant_bit'];
   }
 };
 
@@ -485,6 +437,9 @@ Blockly.Blocks['plantbit2_ultrasonic_checkdistance'] = {
         "helpUrl": Blockly.Msg.ULTRASONIC_CHECK_HELPURL
       }
     );
+  },
+  getDeveloperVars: function() {
+    return ['ultrasonic_plant_bit'];
   }
 };
 
@@ -524,6 +479,9 @@ Blockly.Blocks['plantbit2_ultrasonic_checkwater'] = {
         "helpUrl": ""
       }
     );
+  },
+  getDeveloperVars: function() {
+    return ['ultrasonic_plant_bit'];
   }
 };
 
@@ -552,6 +510,9 @@ Blockly.Blocks['plantbit2_oled_create'] = {
         "helpUrl": Blockly.Msg.OLED_CREATE_HELPURL
       }
     );
+  },
+  getDeveloperVars: function() {
+    return ['lcd_oled'];
   }
 };
 
@@ -595,6 +556,9 @@ Blockly.Blocks['plantbit2_oled_text'] = {
         "helpUrl": Blockly.Msg.OLED_TEXT_HELPURL
       }
     );
+  },
+  getDeveloperVars: function() {
+    return ['lcd_oled'];
   }
 };
 
@@ -623,11 +587,13 @@ Blockly.Blocks['plantbit2_oled_fill'] = {
         "helpUrl": Blockly.Msg.OLED_FILL_HELPURL
       }
     );
+  },
+  getDeveloperVars: function() {
+    return ['lcd_oled'];
   }
 };
 
 Blockly.Python['plantbit2_oled_fill'] = function(block) {
-  var variable_oled_lcd = Blockly.Python.variableDB_.getName(block.getFieldValue('oled_lcd'), Blockly.Variables.NAME_TYPE);
   // TODO: Assemble Python into code variable.
   //oled.fill(1); oled.show()
   var code = 'lcd_oled.fill(0); lcd_oled.show()\n';
