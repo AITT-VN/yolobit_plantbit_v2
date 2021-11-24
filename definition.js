@@ -56,12 +56,12 @@ Blockly.Blocks['plantbit2_light_sensor'] = {
             "name": "NAME",
             "options": [
               [
-                "P0",
-                "pin0"
-              ],
-              [
                 "P1",
                 "pin1"
+              ],
+              [
+                "P0",
+                "pin0"
               ],
               [
                 "P2",
@@ -136,7 +136,7 @@ Blockly.Python["plantbit2_dht_measure"] = function(block) {
   Blockly.Python.definitions_['import_i2c'] = 'from machine import Pin, SoftI2C';
   Blockly.Python.definitions_["import_dht20"] = "from plantbit2_dht20 import DHT20";
   Blockly.Python.definitions_["import_create_dht20"] = "dht20 = DHT20(SoftI2C(scl=Pin(22), sda=Pin(21)))";
-  var code = "dht20.dht20_measure()\n";
+  var code = "dht20.read_dht20()\n";
   return code;
 };
 
