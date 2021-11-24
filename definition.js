@@ -91,14 +91,14 @@ Blockly.Python['plantbit2_light_sensor'] = function(block) {
 Blockly.Blocks["plantbit2_dht_measure"] = {
   init: function() {
     this.jsonInit({
-      message0: Blockly.Msg.BLOCK_DHT_MEANSURE_MESSAGE0,
+      message0: Blockly.Msg.BLOCK_PLANTBITV2_DHT_MEANSURE_MESSAGE0,
       args0: [
       ],
       previousStatement: null,
       nextStatement: null,
       colour: "#009900",
-      tooltip: Blockly.Msg.BLOCK_DHT_MEANSURE_TOOLTIP,
-      helpUrl: Blockly.Msg.BLOCK_DHT_MEANSURE_HELPURL
+      tooltip: Blockly.Msg.BLOCK_PLANTBITV2_DHT_MEANSURE_TOOLTIP,
+      helpUrl: Blockly.Msg.BLOCK_PLANTBITV2_DHT_MEANSURE_HELPURL
     });
   },
   getDeveloperVars: function() {
@@ -109,21 +109,21 @@ Blockly.Blocks["plantbit2_dht_measure"] = {
 Blockly.Blocks["plantbit2_dht_read"] = {
   init: function() {
     this.jsonInit({
-      message0: Blockly.Msg.BLOCK_DHT_READ_MESSAGE0,
+      message0: Blockly.Msg.BLOCK_PLANTBITV2_DHT_READ_MESSAGE0,
       args0: [
         {
           type: "field_dropdown",
           name: "DATA",
           options: [
-            [Blockly.Msg.BLOCK_DHT_READ_MESSAGE1, "TEMP"],
-            [Blockly.Msg.BLOCK_DHT_READ_MESSAGE2, "HUMID"]
+            [Blockly.Msg.BLOCK_PLANTBITV2_DHT_READ_MESSAGE1, "TEMP"],
+            [Blockly.Msg.BLOCK_PLANTBITV2_DHT_READ_MESSAGE2, "HUMID"]
           ]
         }
       ],
       output: null,
       colour: "#009900",
-      tooltip: Blockly.Msg.BLOCK_DHT_READ_TOOLTIP,
-      helpUrl: Blockly.Msg.BLOCK_DHT_READ_HELPURL
+      tooltip: Blockly.Msg.BLOCK_PLANTBITV2_DHT_READ_TOOLTIP,
+      helpUrl: Blockly.Msg.BLOCK_PLANTBITV2_DHT_READ_HELPURL
     });
   },
   getDeveloperVars: function() {
@@ -334,8 +334,8 @@ Blockly.Blocks['plantbit2_ultrasonic_create'] = {
         "previousStatement": null,
         "nextStatement": null,
         "colour": "#009900",
-        "tooltip": Blockly.Msg.ULTRASONIC_CREATE_TOOLTIP,
-        "helpUrl": Blockly.Msg.ULTRASONIC_CREATE_HELPURL
+        "tooltip": Blockly.Msg.PLANTBITV2_ULTRASONIC_CREATE_TOOLTIP,
+        "helpUrl": Blockly.Msg.PLANTBITV2_ULTRASONIC_CREATE_HELPURL
       }
     );
   },
@@ -359,7 +359,7 @@ Blockly.Blocks['plantbit2_ultrasonic_read'] = {
     this.jsonInit(
       {
         "type": "plantbit_ultrasonic_read",
-        "message0": Blockly.Msg.ULTRASONIC_READ_MESSAGE0,
+        "message0": Blockly.Msg.PLANTBITV2_ULTRASONIC_READ_MESSAGE0,
         "args0": [
           {
             "type": "field_dropdown",
@@ -378,8 +378,8 @@ Blockly.Blocks['plantbit2_ultrasonic_read'] = {
         ],
         "output": null,
         "colour": "#009900",
-        "tooltip": Blockly.Msg.ULTRASONIC_READ_TOOLTIP,
-        "helpUrl": Blockly.Msg.ULTRASONIC_READ_HELPURL
+        "tooltip": Blockly.Msg.PLANTBITV2_ULTRASONIC_READ_TOOLTIP,
+        "helpUrl": Blockly.Msg.PLANTBITV2_ULTRASONIC_READ_HELPURL
       }
     );
   },
@@ -406,7 +406,7 @@ Blockly.Blocks['plantbit2_ultrasonic_checkdistance'] = {
     this.jsonInit(
       {
         "type": "plantbit2_ultrasonic_checkdistance",
-        "message0": Blockly.Msg.ULTRASONIC_CHECK_MESSAGE0,
+        "message0": Blockly.Msg.PLANTBITV2_ULTRASONIC_CHECK_MESSAGE0,
         "args0": [
           {
             "type": "input_dummy"
@@ -433,8 +433,8 @@ Blockly.Blocks['plantbit2_ultrasonic_checkdistance'] = {
         ],
         "output": "Boolean",
         "colour": "#009900",
-        "tooltip": Blockly.Msg.ULTRASONIC_CHECK_TOOLTIP,
-        "helpUrl": Blockly.Msg.ULTRASONIC_CHECK_HELPURL
+        "tooltip": Blockly.Msg.PLANTBITV2_ULTRASONIC_CHECK_TOOLTIP,
+        "helpUrl": Blockly.Msg.PLANTBITV2_ULTRASONIC_CHECK_HELPURL
       }
     );
   },
@@ -500,14 +500,14 @@ Blockly.Blocks['plantbit2_oled_create'] = {
     this.jsonInit(
       {
         "type": "plantbit_oled_create",
-        "message0": Blockly.Msg.OLED_CREATE_MESSAGE0,
+        "message0": Blockly.Msg.PLANTBITV2_OLED_CREATE_MESSAGE0,
         "args0": [
         ],
         "previousStatement": null,
         "nextStatement": null,
         "colour": "#009900",
-        "tooltip": Blockly.Msg.OLED_CREATE_TOOLTIP,
-        "helpUrl": Blockly.Msg.OLED_CREATE_HELPURL
+        "tooltip": Blockly.Msg.PLANTBITV2_OLED_CREATE_TOOLTIP,
+        "helpUrl": Blockly.Msg.PLANTBITV2_OLED_CREATE_HELPURL
       }
     );
   },
@@ -531,7 +531,7 @@ Blockly.Blocks['plantbit2_oled_text'] = {
     this.jsonInit(
       {
         "type": "plantbit2_oled_text",
-        "message0": Blockly.Msg.OLED_TEXT_MESSAGE0,
+        "message0": Blockly.Msg.PLANTBITV2_OLED_TEXT_MESSAGE0,
         "args0": [
           {
             "type": "input_value",
@@ -552,8 +552,8 @@ Blockly.Blocks['plantbit2_oled_text'] = {
         "previousStatement": null,
         "nextStatement": null,
         "colour": "#009900",
-        "tooltip": Blockly.Msg.OLED_TEXT_TOOLTIP,
-        "helpUrl": Blockly.Msg.OLED_TEXT_HELPURL
+        "tooltip": Blockly.Msg.PLANTBITV2_OLED_TEXT_TOOLTIP,
+        "helpUrl": Blockly.Msg.PLANTBITV2_OLED_TEXT_HELPURL
       }
     );
   },
@@ -577,14 +577,14 @@ Blockly.Blocks['plantbit2_oled_fill'] = {
     this.jsonInit(
       {
         "type": "plantbit2_oled_fill",
-        "message0": Blockly.Msg.OLED_FILL_MESSAGE0,
+        "message0": Blockly.Msg.PLANTBITV2_OLED_FILL_MESSAGE0,
         "args0": [
         ],
         "previousStatement": null,
         "nextStatement": null,
         "colour": "#009900",
-        "tooltip": Blockly.Msg.OLED_FILL_TOOLTIP,
-        "helpUrl": Blockly.Msg.OLED_FILL_HELPURL
+        "tooltip": Blockly.Msg.PLANTBITV2_OLED_FILL_TOOLTIP,
+        "helpUrl": Blockly.Msg.PLANTBITV2_OLED_FILL_HELPURL
       }
     );
   },
