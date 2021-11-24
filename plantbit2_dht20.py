@@ -50,9 +50,9 @@ class DHT20(object):
             Temper = Temper | data[5]
             Temper = Temper & 0xfffff
             Temper = (Temper * 200 * 10 / 1024 / 1024 - 500)/10
-        return Temper
+        return round(Temper, 1)
+
     def dht20_humidity(self):
-        
         data = self.read_dht20()
         humidity = 0
         if 1:
@@ -61,5 +61,5 @@ class DHT20(object):
             humidity = humidity | data[3]
             humidity = humidity >> 4
             humidity = (humidity * 100 * 10 / 1024 / 1024)/10
-        return humidity
+        return round(humidity, 1)
 
